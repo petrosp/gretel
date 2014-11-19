@@ -54,10 +54,12 @@ module Gretel
         yield parent
       end
     end
+    
+    attr_reader :breadcrumb_key, :breadcrumb_args
 
     private
 
-    attr_reader :context, :breadcrumb_key, :breadcrumb_args
+    attr_reader :context
 
     # Returns merged options for rendering breadcrumbs.
     def options_for_render(options = {})
